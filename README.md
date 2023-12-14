@@ -1,80 +1,56 @@
-# Project Name
 
-## Description
-Briefly describe your project here. Include its purpose, main functionalities, and any important information that users or developers should know.
+# Convolutional Neural Network (CNN) for Image Classification
 
-## Table of Contents
-- [Dependencies](#dependencies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Dataset Preprocessing](#dataset-preprocessing)
-- [Model Architecture](#model-architecture)
-- [Training](#training)
-- [Results](#results)
+This repository contains a simple implementation of a Convolutional Neural Network (CNN) for image classification using TensorFlow and Keras.
 
-## Dependencies
-List the dependencies required to run your project. Include both libraries and versions to ensure compatibility.
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- Python 3.x
+- TensorFlow
+- Matplotlib
 
 ```bash
-pip install tensorflow pandas matplotlib opencv-python
+pip install tensorflow matplotlib
 ```
 
-## Installation
-Provide step-by-step instructions for installing your project. Include any additional setup or configuration required.
+### Dataset
+
+Download or organize your image dataset into a directory, and update the `image_directory` variable in the code accordingly.
+
+### Installation
+
+No formal installation is required. Just clone the repository and run the provided Python script.
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+python cnn_image_classification.py](https://github.com/Pragateeshwaran/CNN-Cat-and-Dog-Classifier.git)
 ```
 
-## Usage
-Explain how to use your project. Provide code snippets or examples to demonstrate its functionalities.
+## Procedure Map
 
-```python
-import tensorflow as tf
-import pandas as pd
-# ... (import other necessary libraries)
+1. **Import Libraries**: Import the necessary libraries for the project.
 
-# Example usage code here
-```
+2. **Check Image Extensions**: Ensure that your image dataset contains valid image files with extensions like `.jpg`, `.jpeg`, or `.png`.
 
-## Dataset Preprocessing
-Briefly explain the dataset preprocessing steps. Include any important details about data cleaning, filtering, or manipulation.
+3. **Load Image Dataset**: Use TensorFlow's `image_dataset_from_directory` to load and preprocess the image dataset.
 
-```python
-# Dataset preprocessing code snippet
-data_dir = 'dataset'
-image_exts = ['jpeg','jpg', 'bmp', 'png']
-# ... (other preprocessing steps)
-```
+4. **Visualize Image Samples**: Display a sample of images from the dataset for visualization.
 
-## Model Architecture
-Describe the architecture of your model. Include the layers, activation functions, and any other relevant details.
+5. **Build Convolutional Neural Network (CNN) Model**: Create a simple CNN model using the Sequential API from Keras.
 
-```python
-model = tf.keras.Sequential([
-    # ... (add your model layers)
-])
-model.summary()
-```
+6. **Model Summary**: Display the architecture and parameters of the CNN model.
 
-## Training
-Provide information on how to train the model. Include details such as the choice of optimizer, loss function, and metrics.
+7. **Data Splitting**: Split the dataset into training, validation, and test sets.
 
-```python
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-history = model.fit(train_data, validation_data=val_data, epochs=50)
-```
+8. **Compile the Model**: Configure the model with an optimizer, loss function, and evaluation metric.
 
-## Results
-Discuss the results of your project. Include any performance metrics, visualizations, or insights gained from the training process.
+9. **Model Training**: Train the CNN model on the training set, using the validation set for monitoring.
 
-```python
-# Example code to display training results
-plt.plot(history.history['accuracy'], label='accuracy')
-plt.plot(history.history['val_accuracy'], label = 'val_accuracy')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.legend(loc='lower right')
-plt.show()
-```
+10. **Training History**: Plot the training and validation accuracy over epochs.
+
+11. **Evaluate Model**: Evaluate the trained model on the test set.
+
+12. **Visualize Predictions**: Generate predictions on the test set and visualize the results.
